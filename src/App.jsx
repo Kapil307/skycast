@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./App.css";
 
 function App() {
@@ -9,6 +9,10 @@ function App() {
   const [daily, setDaily] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+  getWeather({ preventDefault: () => {} });
+}, []);
 
   async function getWeather(e) {
     e.preventDefault();
