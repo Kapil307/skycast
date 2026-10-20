@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Delhi");
   const [weather, setWeather] = useState(null);
   const [hourly, setHourly] = useState(null);
   const [daily, setDaily] = useState(null);
